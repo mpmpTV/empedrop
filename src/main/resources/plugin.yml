@@ -1,0 +1,14 @@
+name: EmpeDrops
+version: 1.1
+main: pl.empedrops.EmpeDrops
+author: Empe
+api-version: 1.8
+commands:
+  drop:
+    description: Otwiera menu dropu
+  turbodrop:
+    description: Zarzadzanie bonusami dropu
+    permission: empedrops.admin
+  empedrops:
+    description: Glowna komenda administracyjna
+    permission: empedrops.admin
