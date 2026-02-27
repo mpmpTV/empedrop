@@ -7,7 +7,7 @@ settings:
   turbo-multiplier: 2.0
 
   # Wiadomosc przy znalezieniu przedmiotu
-  stone-message: "&6&l! &7Znalazles: {ITEM} &8(&e+1&8)"
+  stone-message: "&6&l[!] &7Znalazles: {ITEM} &8(&e+1&8)"
 
 # Szanse podane w % dla poziomow fortuny: [Brak, Fortuna 1, Fortuna 2, Fortuna 3]
 drops:

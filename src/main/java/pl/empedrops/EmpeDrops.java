@@ -114,6 +114,13 @@ public class EmpeDrops extends JavaPlugin implements Listener, CommandExecutor {
             if (new Random().nextDouble() * 100 <= chance) {
                 Material m = Material.valueOf(drops.getString(key + ".material"));
                 p.getInventory().addItem(new ItemStack(m, 1));
+                HashMap<Integer, ItemStack> fail = p.getInventory().addItem(item);
+                if (!fail.isEmpty()) {
+                    for (ItemStack drop : fail.values()) {
+                        p.getWorld().dropItemNaturally(p.getLocation(), drop);
+                    }
+                    p.sendMessage(color("&c&lUWAGA! &7Twój ekwipunek był pełny, drop wypadł na ziemię!"));
+                }
                 p.giveExp(drops.getInt(key + ".exp"));
                 p.sendMessage(color(getConfig().getString("settings.stone-message").replace("{ITEM}", drops.getString(key + ".name"))));
             }
